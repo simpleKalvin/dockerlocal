@@ -7,7 +7,7 @@
 4. 执行 docker-compose up -d nginx php 即可开始体验与开发环境版本一致的开发感受🌪️
 
 
-**nginx log 目录在 根目录下的nginx/log中**
+**🔥nginx log 目录在 根目录下的nginx/log中 🔥**
 
 ## 进阶
 ### 新增新的php版本
