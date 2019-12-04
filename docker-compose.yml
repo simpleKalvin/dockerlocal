@@ -1,0 +1,29 @@
+version: '2.2'
+services:
+    nginx:
+        container_name: nginx
+        image: nginx:1.17.6-alpine
+        restart: always
+        ports:
+            - 80:80
+            - 443:443
+        volumes: #Overwrite nginx configuration
+        # 挂载配置文件
+            - ./nginx/sites/:/etc/nginx/conf.d/:ro 
+            # 这里设置 宿主项目目录
+            - ${PROJECTPATH}:/var/www:rw
+        networks:
+            - app_net    
+    php:
+        container_name: php
+        build: ./php/${PHPVERSION}
+        ports: 
+            - 9000:9000
+        volumes:
+            - ${PROJECTPATH}:/var/www:rw
+        tty: true
+        networks:
+            - app_net  
+networks: 
+    app_net:
+        driver: bridge    
