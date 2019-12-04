@@ -12,6 +12,8 @@ services:
             - ./nginx/sites/:/etc/nginx/conf.d/:ro 
             # 这里设置 宿主项目目录
             - ${PROJECTPATH}:/var/www:rw
+            # 本地log目录映射
+            - ./nginx/log:/var/log/nginx
         networks:
             - app_net    
     php:
