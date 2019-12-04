@@ -9,8 +9,8 @@ server {
     # ssl_certificate /etc/nginx/ssl/default.crt;
     # ssl_certificate_key /etc/nginx/ssl/default.key;
 
-    server_name localhost;
-    root /var/www/;
+    server_name local.mmclick.com;
+    root /var/www/api-cs.linghit.com/web;
     index index.php index.html index.htm;
 
     location / {
