@@ -24,6 +24,7 @@ services:
         volumes:
             - ${PROJECTPATH}:/var/www:rw
         tty: true
+        working_dir: /var/www
         networks:
             - app_net  
 networks: 
