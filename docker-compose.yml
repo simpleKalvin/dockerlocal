@@ -23,6 +23,8 @@ services:
             - 9000:9000
         volumes:
             - ${PROJECTPATH}:/var/www:rw
+            # 宿主主机的git密钥目录映射至容器内以便composer操作
+            - /Users/kalvin/.ssh/:/root/.ssh/
         tty: true
         working_dir: /var/www
         networks:

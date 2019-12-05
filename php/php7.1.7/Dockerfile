@@ -5,7 +5,7 @@ COPY ./php.ini /usr/local/etc/php/
 RUN apk update \
 # 安装依赖
 && apk add --no-cache bash  \
-g++ gcc make zlib zlib-dev pcre pcre-dev libjpeg  libpng libpng-dev freetype freetype-dev  libxml2 libxml2-dev  bzip2 bzip2-dev ncurses ncurses-dev curl curl-dev e2fsprogs e2fsprogs-dev krb5 krb5-dev openldap openldap-dev   openssl openssl-dev libjpeg-turbo-dev autoconf libmcrypt libmcrypt-dev gettext gettext-dev linux-headers
+g++ gcc make zlib zlib-dev pcre pcre-dev libjpeg  libpng libpng-dev freetype freetype-dev  libxml2 libxml2-dev  bzip2 bzip2-dev ncurses ncurses-dev curl curl-dev e2fsprogs e2fsprogs-dev krb5 krb5-dev openldap openldap-dev   openssl openssl-dev libjpeg-turbo-dev autoconf libmcrypt libmcrypt-dev gettext gettext-dev linux-headers git openssh
 
 
 
