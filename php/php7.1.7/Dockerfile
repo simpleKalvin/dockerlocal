@@ -28,7 +28,9 @@ RUN curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/${
 
 # 安装composer
 RUN curl -sS https://getcomposer.org/installer | php \
-&& mv composer.phar /usr/local/bin/composer
+&& mv composer.phar /usr/local/bin/composer \
+# 设置阿里云镜像
+&& composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 
 # 安装php扩展
