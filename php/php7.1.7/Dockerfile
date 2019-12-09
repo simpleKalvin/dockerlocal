@@ -40,5 +40,5 @@ RUN curl -sS https://getcomposer.org/installer | php \
 
 
 # # 安装php扩展
-RUN docker-php-ext-install bcmath bz2 gd gettext mcrypt mysqli pcntl pdo_mysql shmop soap sysvsem xmlrpc opcache zip  php_sockets\
+RUN docker-php-ext-install bcmath bz2 gd gettext mcrypt mysqli pcntl pdo_mysql shmop soap sysvsem xmlrpc opcache zip  php_sockets sockets\
 && docker-php-ext-enable amqp
