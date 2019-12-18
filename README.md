@@ -12,10 +12,10 @@
 ## 进阶
 ### 新增新的php版本
 1. 复制php 目录下的php7.1.7 至你想要的版本 如php7.2.1
-2. 修改对应版本中的Dockerfile 中的FROM php:7.1.7-fpm-alpine 至 FROM php:（你要的版本）-fpm-alpine
-3. 修改根目录下的.env 中的PHPVERSION 至 1号你设置的php版本 如 php7.2.1
-4. 执行 docker-compose build php
-5. 执行 docker-compose up -d nginx php 即可开始使用新版本🌪️
+2. 修改根目录下的.env 中的PHP_VERSION 至 1号你设置的php版本 如 php7.2.1
+3. 执行 docker-compose build php
+4. 执行 docker-compose up -d nginx php 即可开始使用新版本🌪️
+> 由于版本间依赖会有差异，动手能力强可以这样操作，能力若可以提issue，我就上对应版本
 
 ### 修改swoole版本
 1. 进入想要修改swoole版本的php 版本文件夹 如 根目录下的 php/php7.1.7/Dockerfile

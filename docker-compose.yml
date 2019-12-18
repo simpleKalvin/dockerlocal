@@ -18,9 +18,15 @@ services:
             - app_net    
     php:
         container_name: php
-        build: ./php/${PHPVERSION}
+        build: 
+            context: ./php/php${PHP_VERSION}
+            args:
+                PHP_VERSION: ${PHP_VERSION}
+                SWOOLE_VERSION: ${SWOOLE_VERSION}
+                REDIS_VERSION: ${REDIS_VERSION}
         ports: 
             - 9000:9000
+            - 9501:9501
         volumes:
             - ${PROJECTPATH}:/var/www:rw
             # 宿主主机的git密钥目录映射至容器内以便composer操作
